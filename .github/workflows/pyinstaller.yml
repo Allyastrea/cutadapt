@@ -14,12 +14,10 @@ jobs:
       - name: Install
         run: |
           python -m venv venv
-          dir venv
           venv/Scripts/pip install pyinstaller
           venv/Scripts/pip install .
-          dir venv/Scripts
       - name: Make exe
-        run: venv/Scripts/pyinstaller -F -w venv/Scripts/cutadapt
+        run: venv/Scripts/pyinstaller -F -w venv/Scripts/cutadapt.exe
       - uses: actions/upload-artifact@v2
         with:
           name: cutadapt-exe
