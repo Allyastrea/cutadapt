@@ -14,7 +14,8 @@ jobs:
       - name: Install
         run: |
           python -m venv venv
-          .\venv\bin\pip install pyinstaller
+          ls venv
+          venv\bin\pip install pyinstaller
           .\venv\bin\pip install .
       - name: Make exe
         run: venv/bin/pyinstaller -F -w venv/bin/cutadapt
