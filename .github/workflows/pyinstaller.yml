@@ -18,6 +18,8 @@ jobs:
           venv/Scripts/pip install .
       - name: Make exe
         run: venv/Scripts/pyinstaller -F -w -n cutadapt ca.py
+      - name: Run it
+        run: dist/cutadapt.exe --version
       - uses: actions/upload-artifact@v2
         with:
           name: cutadapt-exe
