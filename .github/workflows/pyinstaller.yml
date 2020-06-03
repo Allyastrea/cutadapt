@@ -18,7 +18,7 @@ jobs:
           venv/Scripts/pip install pyinstaller
           venv/Scripts/pip install .
       - name: Make exe
-        run: venv/bin/pyinstaller -F -w venv/Scripts/cutadapt
+        run: venv/Scripts/pyinstaller -F -w venv/Scripts/cutadapt
       - uses: actions/upload-artifact@v2
         with:
           name: cutadapt-exe
