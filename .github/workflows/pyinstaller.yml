@@ -14,7 +14,7 @@ jobs:
       - name: Install
         run: |
           python -m venv venv
-          ls venv
+          dir venv
           venv\bin\pip install pyinstaller
           .\venv\bin\pip install .
       - name: Make exe
